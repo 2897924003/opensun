@@ -1,0 +1,50 @@
+server:
+  port: 0 #随机端口
+
+
+spring:
+  application:
+    name: message-service #服务名称
+  #profiles:
+  # active: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver #数据库驱动实现
+    url: jdbc:mysql://localhost:3306/test-zerostart?useSSL=false&serverTimezone=UTC
+    username: root #数据库用户名
+    password: 2005 #数据库密码
+  data:
+    redis:
+      password:
+      port: 6379
+      host: 127.0.0.1
+
+
+
+  mail:
+    protocol: smtp
+    host: smtp.qq.com
+    port: 587
+    username: 2897924003@qq.com
+    password: ldqqcsrbgkufdgfe
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+  rabbitmq:
+    username: admin
+    host: localhost
+    password: admin
+    port: 5672
+    virtual-host: /
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka 服务端的地址
+    register-with-eureka: true #将自己注册到注册中心，以便其他服务发现自己
+  instance:
+    hostname: localhost
+
+
+
+

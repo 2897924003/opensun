@@ -1,0 +1,32 @@
+server:
+  port: 8100
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+
+spring:
+  application:
+    name: gateway
+  #profiles:
+  # active: local
+  main:
+    web-application-type: reactive
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 启用服务发现自动路由
+    loadbalancer:
+      eureka:
+        approximate-zone-from-hostname: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka 服务端的地址
+    registerWithEureka: true  # 如果不想将 Gateway 注册到 Eureka 服务中
+    fetchRegistry: true  # 从 Eureka 获取注册的服务列表
+  instance:
+    hostname: localhost

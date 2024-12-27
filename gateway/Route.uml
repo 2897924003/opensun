@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>route.Route</OriginalElement>
+  <nodes>
+    <node x="38.5" y="64.0">route.Route</node>
+    <node x="-89.0" y="-14.0">infrastructure_layer.SubscriptionPuller</node>
+    <node x="156.33333333333331" y="-14.0">org.springframework.stereotype.Controller</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="route.Route" target="infrastructure_layer.SubscriptionPuller" relationship="TO_ONE">
+      <point x="-23.0" y="-14.0" />
+      <point x="61.5" y="39.0" />
+      <point x="0.0" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="route.Route" target="org.springframework.stereotype.Controller" relationship="REALIZATION">
+      <point x="23.0" y="-14.0" />
+      <point x="107.5" y="39.0" />
+      <point x="216.33333333333331" y="39.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="1.5" showDependencies="true" x="161.33333333333326" y="-61.666666666666686" />
+  <SelectedNodes>
+    <node>org.springframework.stereotype.Controller</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

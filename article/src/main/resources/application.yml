@@ -1,0 +1,54 @@
+server:
+  port: 0 #服务端口
+
+spring:
+  application:
+    name: article-service #服务名称
+  cloud:
+    discovery:
+      enabled: true  # 启用服务发现
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        generate_statistics: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test-zerostart?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 2005
+
+  elasticsearch:
+    uris: http://localhost:9200
+
+  data:
+    redis:
+      password:
+      port: 6379
+      host: 127.0.0.1
+    elasticsearch:
+      repositories:
+        enabled: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.baomidou.mybatisplus: DEBUG
+    org.mybatis.spring: DEBUG
+    org.apache.ibatis: DEBUG
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # Eureka 服务端的地址
+    register-with-eureka: true #将自己注册到注册中心，以便其他服务发现自己
+    fetch-registry: true #发现服务
+  instance:
+    hostname: localhost

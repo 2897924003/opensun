@@ -1,0 +1,10 @@
+server:
+  port: 8761  # Eureka 服务端的端口
+
+eureka:
+  server:
+    enableSelfPreservation: false  # 禁用自我保护模式，确保服务注册中心始终可用
+  client:
+    # Eureka 客户端配置，这里可以配置是否向其他 Eureka 注册中心同步
+    fetchRegistry: false  # 启动时不需要从其他 Eureka 服务端获取服务列表
+    registerWithEureka: false  # 该服务本身不会注册到 Eureka

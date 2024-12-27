@@ -1,0 +1,39 @@
+# IntelliJ IDEA
+/.idea/
+*.iml
+/out/
+
+# 排除所有编译输出
+**/target/
+logs/
+
+# Gradle
+/build/
+**/build/
+
+# Node.js
+/node_modules/
+/dist/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.AppleDouble
+.Trashes
+
+# Temporary Files
+*.log
+*.tmp
+*.swp
+*.bak
+*.pid
+*.seed
+
+# 排除所有test目录
+/src/test/
+**/src/test/
+
+# 排除vscode目录
+**/.vscode/
+
