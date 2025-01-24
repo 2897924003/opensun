@@ -4,6 +4,7 @@ const gatewayCAS: AxiosInstance = axios.create({ baseURL: 'https://115.120.246.3
 const gatewayCodeService: AxiosInstance = axios.create({ baseURL: 'https://115.120.246.30/code' });
 const gatewayMessageService: AxiosInstance = axios.create({ baseURL: 'https://115.120.246.30/message' });
 const gatewayArticleService: AxiosInstance = axios.create({ baseURL: 'https://115.120.246.30/article' });
+const gatewayPayService: AxiosInstance = axios.create({ baseURL: 'https://115.120.246.30/pay' });
 
 
 export {
@@ -11,5 +12,6 @@ export {
   gatewayCAS,
   gatewayCodeService,
   gatewayMessageService,
-  gatewayArticleService
+  gatewayArticleService,
+  gatewayPayService
 };

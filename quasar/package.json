@@ -15,20 +15,28 @@
     "postinstall": "quasar prepare"
   },
   "dependencies": {
-    "@quasar/extras": "^1.16.15",
+    "@quasar/extras": "^1.16.16",
     "axios": "^1.7.9",
-    "pinia": "^2.3.0",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-deflist": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-ins": "^4.0.0",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "pinia": "^2.3.1",
     "pinia-plugin-persistedstate": "^4.2.0",
-    "pinia-use-persist": "^0.0.21",
-    "quasar": "^2.17.5",
+    "quasar": "^2.17.7",
     "vue": "^3.5.13",
     "vue-i18n": "^9.14.2",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^2.0.0",
-    "@quasar/app-vite": "^2.0.4",
-    "@types/node": "^20.17.10",
+    "@quasar/app-vite": "^2.0.8",
+    "@quasar/quasar-app-extension-qmarkdown": "^2.0.4",
+    "@types/node": "^20.17.16",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "autoprefixer": "^10.4.20",
@@ -38,7 +46,7 @@
     "prettier": "^3.4.2",
     "typescript": "~5.5.4",
     "vite-plugin-checker": "^0.8.0",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.2.0"
   },
   "engines": {
     "node": "^24 || ^22 || ^20 || ^18",

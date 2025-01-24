@@ -34,7 +34,9 @@ export class RegisterFrom {
           username: this.username,
           password: this.password,
           codeContext: {
-            code: this.code
+            code: this.code,
+            to: this.username,
+            operation: 'create_account'
           } as Code
 
         },

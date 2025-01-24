@@ -144,7 +144,7 @@
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { gatewayArticleService } from 'boot/axios';
-//import {QMarkdown} from '@quasar/quasar-ui-qmarkdown';
+import { QMarkdown } from '@quasar/quasar-ui-qmarkdown';
 import { useAuthStore } from 'stores/user';
 import { ApiCO } from 'src/domain/ApiCO';
 import { type ApiRO, type PageMetaRO } from 'src/domain/ApiRO';

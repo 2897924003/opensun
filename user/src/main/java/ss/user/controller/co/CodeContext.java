@@ -16,7 +16,8 @@ public record CodeContext(
      * @param to        收码人
      */
     public CodeContext {
-
+        if (code.length() != 6) {
+        }
     }
 
 }

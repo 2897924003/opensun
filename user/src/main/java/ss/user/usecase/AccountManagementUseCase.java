@@ -27,12 +27,13 @@ public class AccountManagementUseCase {
 
     /**
      * 查询用户
-     *
      * @return 用户
+     * @author sun jian hao@2897924003
      */
     public ApiRO<AccountRO> findUserById(ApiCO<Long> co) {
         Optional<User> optUser = userBasedConsistentRepositories.findUserById(co.co);
         Optional<UserSummary> optSummary = userBasedConsistentRepositories.findUserSummaryById(co.co);
+
         ApiRO<AccountRO> apiRO = ApiRO.unknown();
         optUser.ifPresentOrElse(
                 user -> {
@@ -41,14 +42,14 @@ public class AccountManagementUseCase {
                                 throw DataNotConsistentException.msg(this.getClass().getName());
                             });
                 },
-                () -> apiRO.beFail("用户不存在")
+                () -> apiRO.beFail("user not exist")
         );
 
         return apiRO;
     }
 
     /**
-     * [启用/禁用，锁定/解锁，过期/续期]
+     * 账号[启用/禁用，锁定/解锁，过期/续期]
      */
     public ApiRO<Void> changeAccountStatus(ApiCO<ChangeAccountStatusCO> apiCO) {
         ChangeAccountStatusCO co = apiCO.co;

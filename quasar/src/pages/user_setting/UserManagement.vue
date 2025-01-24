@@ -51,7 +51,6 @@
   </q-page>
 </template>
 <script setup>
-import DraftPage from 'pages/article_management/DraftPage.vue';
 import { ref } from 'vue';
 import ProfileCard from 'pages/user_setting/ProfileCard.vue';
 import UserSetting from 'pages/user_setting/UserSetting.vue';

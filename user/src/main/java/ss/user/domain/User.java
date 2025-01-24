@@ -45,6 +45,11 @@ public class User {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password);
+        user.setEnabled(true);
+        user.setAccountNonExpired(true);
+        user.setAccountNonLocked(true);
+        user.setAccountNonExpired(true);
+
         return user;
     }
 

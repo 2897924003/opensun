@@ -38,6 +38,7 @@ const routes: RouteRecordRaw[] = [
 
   {
     path: '/discuss',
+    name: 'content',
     component: () => import('layouts/ZeroStart.vue'),
     meta: { requireAuthenticated: false },
     redirect: '/discuss/home',
@@ -67,10 +68,27 @@ const routes: RouteRecordRaw[] = [
       {
         path: 'user',
         component: () => import('pages/user_setting/UserManagement.vue')
+      },
+
+    ]
+  },
+  {
+    path: '/shop',
+    name: 'shop',
+    component: () => import('layouts/ShopLayout.vue'),
+    children: [
+      {
+        path: 'home',
+        name: 'home',
+        component: () => import('pages/ShopBuy.vue')
+      },
+      {
+        path: 'mine',
+        name: 'mine',
+        component: () => import('pages/user_setting/UserManagement.vue')
       }
     ]
   },
-
   {
     path: '/building',
     name: 'building',

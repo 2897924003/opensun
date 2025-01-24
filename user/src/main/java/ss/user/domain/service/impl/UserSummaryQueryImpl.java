@@ -1,18 +1,17 @@
-package ss.user.service.impl;
+package ss.user.domain.service.impl;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import ss.user.domain.UserSummary;
 import ss.user.infrastructure.persistance.UserSummaryRepository;
 import ss.user.infrastructure.util.GoogleBloomFilterService;
-import ss.user.service.UserSummaryQueryService;
 import ss.user.usecase.exception.UserNotFoundException;
 
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class UserSummaryQueryImpl implements UserSummaryQueryService {
+public class UserSummaryQueryImpl {
     private final UserSummaryRepository userSummaryRepository;
     private final RedisTemplate<String, UserSummary> redisTemplate;
     private final GoogleBloomFilterService bloomFilterService;
@@ -31,7 +30,6 @@ public class UserSummaryQueryImpl implements UserSummaryQueryService {
      * @param id 用户id
      * @return 用户概览信息-用户名-头像
      */
-    @Override
     public UserSummary findUserSummaryById(Long id) {
 
 

@@ -2,7 +2,6 @@ import { defineStore } from '#q-app/wrappers';
 import { createPinia } from 'pinia';
 import type { Router } from 'vue-router';
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
-import { usePersist } from 'pinia-use-persist';
 /*
  * When adding new properties to stores, you should also
  * extend the `PiniaCustomProperties` interface.
@@ -29,6 +28,5 @@ export default defineStore((/* { ssrContext } */) => {
   // 在这里添加Pinia插件
   // pinia.use(SomePiniaPlugin)
   pinia.use(piniaPluginPersistedstate);
-  pinia.use(usePersist);
   return pinia;
 });

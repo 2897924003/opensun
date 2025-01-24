@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import ss.user.domain.UserSummary;
-import ss.user.service.UserSummaryQueryService;
+import ss.user.domain.service.impl.UserSummaryQueryImpl;
 
 @RestController
 public class UserSummaryController {
-    private final UserSummaryQueryService userSummaryQueryService;
+    private final UserSummaryQueryImpl userSummaryQueryService;
 
-    public UserSummaryController(UserSummaryQueryService userSummaryQueryService) {
+    public UserSummaryController(UserSummaryQueryImpl userSummaryQueryService) {
         this.userSummaryQueryService = userSummaryQueryService;
     }
 

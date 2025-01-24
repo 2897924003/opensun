@@ -1,4 +1,4 @@
-package ss.user.service;
+package ss.user.domain.service;
 
 import ss.user.domain.UserSummary;
 

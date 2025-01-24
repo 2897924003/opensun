@@ -1,21 +1,21 @@
-<!--
+
 <script setup>
-import {nextTick, onMounted, ref, watch} from 'vue';
-import {useAuthStore} from 'stores/user';
-import {gatewayArticleService} from 'boot/axios';
-import { useQuasar} from 'quasar';
+import { nextTick, onMounted, ref, watch } from 'vue';
+import { useAuthStore } from 'stores/user';
+import { gatewayArticleService } from 'boot/axios';
+import { useQuasar } from 'quasar';
 
 
 /*这里是q-markdown的所有插件的导入*/
-import abbreviation from 'markdown-it-abbr'
-import deflist from 'markdown-it-deflist'
+import abbreviation from 'markdown-it-abbr';
+import deflist from 'markdown-it-deflist';
 //import emoji from 'markdown-it-emoji'
-import footnote from 'markdown-it-footnote'
-import insert from 'markdown-it-ins'
-import mark from 'markdown-it-mark'
-import subscript from 'markdown-it-sub'
-import superscript from 'markdown-it-sup'
-import taskLists from 'markdown-it-task-lists'
+import footnote from 'markdown-it-footnote';
+import insert from 'markdown-it-ins';
+import mark from 'markdown-it-mark';
+import subscript from 'markdown-it-sub';
+import superscript from 'markdown-it-sup';
+import taskLists from 'markdown-it-task-lists';
 //import mermaid from '@datatraccorporation/markdown-it-mermaid'
 
 // 引用的内容
@@ -159,7 +159,6 @@ function addNewLine() {
 <template>
   <q-page>
     <q-card class="fit">
-      &lt;!&ndash; 文章标题输入框 &ndash;&gt;
       <q-input
         v-model="articleMeta.title"
         label="请输入标题（建议30字以内）"
@@ -168,7 +167,6 @@ function addNewLine() {
         filled
       />
 
-      &lt;!&ndash; 文章概览和文件上传 &ndash;&gt;
       <q-card-section >
           <q-input
             v-model="articleMeta.summary"
@@ -190,7 +188,6 @@ function addNewLine() {
           />
       </q-card-section>
 
-      &lt;!&ndash; 文章编辑器 &ndash;&gt;
       <q-card-section>
         <q-editor
           ref="editorRef"
@@ -204,14 +201,12 @@ function addNewLine() {
       </q-card-section>
 
 
-      &lt;!&ndash; 更多设置 &ndash;&gt;
       <q-card-section>
         <q-expansion-item label="更多设置" expand-icon="expand_more">
           <div>分类、封面、标签、文集、定时发布等设置</div>
         </q-expansion-item>
       </q-card-section>
 
-      &lt;!&ndash; 按钮区域 &ndash;&gt;
       <q-card-section>
         <q-btn color="primary" label="提交文章"/>
         <q-btn @click="createArticle" color="primary" outline label="存草稿"></q-btn>
@@ -226,4 +221,4 @@ function addNewLine() {
 
 <style scoped></style>
 
--->
+

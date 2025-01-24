@@ -29,7 +29,7 @@ const $router = useRouter();
 
     <q-btn
       class='col-12 col-sm-4'
-      icon="system"
+      icon="settings_suggest"
       label='后台系统'
       @click='$router.push("/accountmanagement")'
       rounded
@@ -39,9 +39,19 @@ const $router = useRouter();
 
     <q-btn
       class='col-12 col-sm-4'
-      icon='love'
+      icon='live_tv'
       label='内容分发平台'
-      @click='$router.push("/discuss")'
+      @click='$router.push({ name: "content" })'
+      rounded
+      dense
+      glossy
+    />
+
+    <q-btn
+      class='col-12 col-sm-4'
+      icon='shop'
+      label='电商'
+      @click='$router.push({ name: "home" })'
       rounded
       dense
       glossy
